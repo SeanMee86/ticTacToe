@@ -1,0 +1,133 @@
+@font-face {
+    font-family: NinjaFont;
+    src: url(lastninja.ttf);
+}
+
+.modalArea{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.2);
+    z-index: 1;
+    position: fixed;
+    display: none;
+}
+
+.music:hover {
+    cursor: pointer;
+}
+
+img.winPic {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+}
+
+#gameContainer {
+    background-color: rgba(171,169,171,0.65);
+    height: 40vw;
+    padding: 0;
+}
+
+.gameCells {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 4em;
+    padding-top: 2%;
+    float: left;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('ninjamonk.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+div{
+    color: white;
+    font-family: NinjaFont, 'Ravi Prakash', Helvetica, cursive
+}
+
+#playerOne {
+    background-image: url(ninjaicon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: left;
+}
+
+#playerTwo {
+    background-image: url(aang.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: right;
+}
+
+#gameSelector{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+}
+
+.gameType{
+    display: block;
+}
+
+.players {
+    font-size: 7vw;
+    height: 20vh;
+    box-sizing: border-box;
+    float: left;
+    background-color: #4e4c51;
+}
+
+div.selected {
+    background-color: #833438;
+}
+
+#sidebarContainer{
+    height: 50vh;
+    width: 100vw;
+    top: 10%;
+    z-index: 1;
+    /*background-color: rgba(100,100,100,.5);*/
+    position: fixed;
+    text-align: center;
+}
+#title{
+    font-size: 4vmin;
+}
+@media (min-width: 1100px){
+    #sidebarContainer{
+        top: 20%
+    }
+}
+@media (max-width: 575px){
+    #gameContainer{
+        height: 40vh;
+    }
+    #title{
+        font-size: 6vmin;
+    }
+    #sidebarContainer{
+        top: 30%;
+        font-size: 3vmin;
+    }
+    #sideBarTitle {
+        font-size: 4vmin;
+    }
+    .music{
+        width: 30vw;
+    }
+}
+@media (min-width: 1800px){
+    #gameContainer{
+        height: 30vw;
+    }
+}

@@ -1,0 +1,166 @@
+html {
+    background: url(ninjamonk.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.ninjaModalText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.monkModalText {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%,-50%)
+}
+.modalArea{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.2);
+    z-index: 1;
+    position: fixed;
+    display: none;
+}
+#passwordInput {
+    width: 170%;
+}
+img.winPic {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+}
+@font-face {
+    font-family: NinjaFont;
+    src: url(lastninja.ttf);
+}
+body {
+    margin: 0;
+    font-family: NinjaFont, 'Ravi Prakash', Helvetica, cursive;
+    color: white;
+}
+
+.musicButton {
+    position: absolute;
+    font-size: 2vmin;
+}
+#playMusic{
+    top:0;
+}
+.musicButton:hover {
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 3.5vw;
+}
+
+#nameDisplay #messageDisplay {
+    display: inline;
+}
+
+#gameContainer {
+    width: 60vw;
+    height: 60vw;
+    background-color: rgba(171,169,171,0.65);
+    float: right;
+    margin-right: 20vw;
+}
+
+.gameCells {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 4em;
+    padding-top: 2%;
+    float: left;
+    box-sizing: border-box;
+}
+
+#sidebarContainer {
+    left: 2%;
+    position: relative;
+    font-size: 1.5vw;
+    width: 8%;
+    padding-left: 3%;
+}
+
+#userContainer {
+    height: 18vh;
+    width: 51vh;
+    margin: 30px auto 0 auto;
+}
+
+.players {
+    width: 50%;
+    height: 100%;
+    font-size: 7vw;
+    box-sizing: border-box;
+    float: left;
+    background-color: #4e4c51;
+}
+
+#playerOne {
+    background-image: url(ninjaicon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#playerTwo {
+    background-image: url(aang.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+}
+
+div .selected {
+    background-color: #833438;
+}
+#gameSelector, h1, p {
+    text-shadow: 3px 5px 3px #000000;
+}
+#radioButtonContainer {
+    width: 8vw;
+    margin: 10px;
+}
+
+#reset, #newGame {
+    position: absolute;
+    margin: 10px auto;
+    display: block;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+#reset {
+    display: none;
+}
+.gameType {
+    display: block;
+}
+input[type=radio] {
+    display: inline;
+    clear: none;
+}
+label {
+    display: block;
+    clear: none;
+}
+
+button[type=button] {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    background: #d10000;
+    text-decoration: none;
+}
+
+button[type=button]:hover {
+    background: #939799;
+    text-decoration: none;
+}
