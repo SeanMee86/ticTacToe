@@ -1,24 +1,15 @@
 var canIClick = true;
 var player1Click = true;
 var player2Click = false;
-var players = [
-    {
-        symbol:'+',
-        name:'Ninja',
-        onBecomeCurrentPlayer: function(){
-            $('#playerOne').removeClass('selected');
-            $('#playerTwo').addClass('selected');
-        }
-    },
-    {
-        symbol: 'O',
-        name:'Monk',
-        onBecomeCurrentPlayer: function(){
-            $('#playerTwo').removeClass('selected');
-            $('#playerOne').addClass('selected');
-        }
+function Player(){
+    this.symbol = '';
+    this.key= '';
+    this.name= '';
+    this.onBecomeCurrentPlayer = function () {
+        $('#playerOne').removeClass('selected');
+        $('#playerTwo').addClass('selected');
     }
-];
+};
 var winCheckArray=[];
 var currentPlayer = 1;
 var tttModel;
@@ -162,10 +153,16 @@ function populateWinCheckArray(){
 }
 //**********************************************************************************************************************
 function createGameBoard(){
-    if($('#passwordInput').val() !== '') {
+    var $input = $('#passwordInput').val();
+    if($($input !== '')) {
         $('#newGame').css('display', 'none');
         $('#passwordInput').css('display','none');
         $("#gameContainer").empty();
+        if(!playerOne) {
+            var playerOne = new Player;
+            playerOne.name = 'ninja';
+            playerOne.symbol = ''
+        }
         var boardPiece;
         var boardSize = $('.boardSize:checked').val();
         for (var i = 0; i < boardSize; i++) {
@@ -179,7 +176,6 @@ function createGameBoard(){
         }
         applyClickHandlers();
         populateWinCheckArray();
-        var $input = $('#passwordInput').val();
         if(!tttModel) {
             tttModel = new GenericFBModel($input, boardUpdated);
         }
