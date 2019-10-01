@@ -161,7 +161,13 @@ function createGameBoard(){
         if(!playerOne) {
             var playerOne = new Player;
             playerOne.name = 'ninja';
-            playerOne.symbol = ''
+            playerOne.symbol = '+';
+            playerOne.key = $input;
+        }else {
+            var playerTwo = new Player;
+            playerTwo.name = 'monk';
+            playerTwo.symbol = 'O';
+            playerTwo.key = $input;
         }
         var boardPiece;
         var boardSize = $('.boardSize:checked').val();
