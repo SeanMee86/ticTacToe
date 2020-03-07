@@ -126,9 +126,6 @@ div.selected {
     #sideBarTitle {
         font-size: 4vmin;
     }
-    .music{
-        width: 30vw;
-    }
 }
 @media (min-width: 1800px){
     #gameContainer{
