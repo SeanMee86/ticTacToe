@@ -49,7 +49,7 @@ body {
     font-size: 2vmin;
 }
 #playMusic{
-    top:0;
+    top:10px;
 }
 .musicButton:hover {
     cursor: pointer;

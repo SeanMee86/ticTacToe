@@ -12,6 +12,10 @@
     display: none;
 }
 
+.music {
+    width: 190px;
+}
+
 .music:hover {
     cursor: pointer;
 }
